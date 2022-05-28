@@ -80,7 +80,7 @@ namespace EjercicioClientes.AccesoDatos
             n.Add("DNI", cliente.DNI.ToString());
             n.Add("Activo", cliente.Activo.ToString());
             n.Add("FechaNacimiento", cliente.FechaNacimiento.ToString("yyyy-MM-dd"));
-            n.Add("Usuario", ACA_VA_TU_REGISTRO);
+            n.Add("Usuario", "123");
             return n;
         }
     }

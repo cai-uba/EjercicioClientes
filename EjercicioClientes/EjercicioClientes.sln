@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjercicioClientes.AccesoDat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjercicioClientes.Entidades", "EjercicioClientes.Entidades\EjercicioClientes.Entidades.csproj", "{C1E6F0A9-DEA1-43FD-855B-0C1DD772DAEB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjercicioClientes.InterfazForm", "EjercicioClientes.InterfazForm\EjercicioClientes.InterfazForm.csproj", "{685C7C9D-1753-4F00-B23C-B8827225B136}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{C1E6F0A9-DEA1-43FD-855B-0C1DD772DAEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1E6F0A9-DEA1-43FD-855B-0C1DD772DAEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1E6F0A9-DEA1-43FD-855B-0C1DD772DAEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{685C7C9D-1753-4F00-B23C-B8827225B136}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{685C7C9D-1753-4F00-B23C-B8827225B136}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{685C7C9D-1753-4F00-B23C-B8827225B136}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{685C7C9D-1753-4F00-B23C-B8827225B136}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

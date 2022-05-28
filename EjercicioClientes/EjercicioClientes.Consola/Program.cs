@@ -31,7 +31,8 @@ namespace EjercicioClientes.Consola
 
             try
             {
-                clientes.Alta("Pepe", "sarasa", 456456);
+                clientes.Alta("Carlos", "Gonzalez", 20123456,"asdqwe@yopmail.com","moldes 123",
+                    "1130604050", DateTime.Now.AddDays(-6000));
             }
             catch (Exception ex)
             {
