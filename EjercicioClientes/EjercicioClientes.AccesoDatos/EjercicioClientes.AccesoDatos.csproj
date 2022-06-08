@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClienteDatos.cs" />
+    <Compile Include="CuentaDatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilidades\WebHelper.cs" />
   </ItemGroup>

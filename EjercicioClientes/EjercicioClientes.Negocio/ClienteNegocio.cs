@@ -11,10 +11,12 @@ namespace EjercicioClientes.Negocio
     public class ClienteNegocio
     {
         private ClienteDatos _clienteDatos;
+        private CuentaDatos _cuentaDatos;
 
         public ClienteNegocio()
         {
             _clienteDatos = new ClienteDatos();
+            _cuentaDatos = new CuentaDatos();
         }
 
         public List<Cliente> GetLista()
@@ -22,6 +24,17 @@ namespace EjercicioClientes.Negocio
             List<Cliente> list = _clienteDatos.Traer(123);
 
             return list;
+        }
+
+        public Cliente GetById(int idCliente)
+        {
+            foreach (var item in GetLista())
+            {
+                if (idCliente == item.id)
+                    return item;
+            }
+
+            return null;
         }
 
         public Cliente GetPorTelefono(string telefono)
@@ -44,6 +57,63 @@ namespace EjercicioClientes.Negocio
             cliente.Telefono = telefono;
 
             TransactionResult transaction = _clienteDatos.Insertar(cliente);
+
+            if (!transaction.IsOk)
+                throw new Exception(transaction.Error);
+        }
+
+       
+
+        public void AltaCuenta(Cliente cliente, string descripcion)
+        {
+            // validar cliente no nulo
+            // validar cliente no tenga cuenta
+
+            Cuenta cuenta = new Cuenta(cliente.id, descripcion);
+
+            TransactionResult transaction = _cuentaDatos.Insertar(cuenta);
+
+            if (!transaction.IsOk)
+                throw new Exception(transaction.Error);
+        }
+
+        public Cuenta TraerCuenta(Cliente cliente)
+        {
+            // validar cliente no nulo
+
+            return _cuentaDatos.Traer(cliente.id);
+        }
+
+
+        public void IngresarDinero(Cliente cliente, Cuenta cuenta, double ingreso)
+        {
+            // validar cliente no nulo
+            // validar cuenta no nula
+            // validar cuenta este activa
+
+            cuenta.Saldo += ingreso;
+
+            ActualizarCuenta(cuenta);
+        }
+
+        public void RetirarDinero(Cliente cliente, Cuenta cuenta, double retiro)
+        {
+            // validar cliente no nulo
+            // validar cuenta no nula
+            // validar cuenta este activa
+            // validar saldo sea >= retiro
+
+            cuenta.Saldo -= retiro;
+
+            ActualizarCuenta(cuenta);
+        }
+
+
+        private void ActualizarCuenta(Cuenta cuenta)
+        {
+            
+
+            TransactionResult transaction = _cuentaDatos.Actualizar(cuenta);
 
             if (!transaction.IsOk)
                 throw new Exception(transaction.Error);

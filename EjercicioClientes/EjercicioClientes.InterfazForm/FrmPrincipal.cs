@@ -42,7 +42,7 @@ namespace EjercicioClientes.InterfazForm
                         clientes += c.ToString() + Environment.NewLine;
                     }
 
-                    MessageBox.Show(clientes);
+                    //MessageBox.Show(clientes);
 
                 _lblListaClientes.Text = clientes;
             }
@@ -107,5 +107,12 @@ namespace EjercicioClientes.InterfazForm
             _txtApellido.Text = string.Empty;
         }
 
+        private void _btnCuentas_Click(object sender, EventArgs e)
+        {
+            FrmCuentas frmCuentas = new FrmCuentas(this);
+            frmCuentas.Show();
+
+            this.Hide();
+        }
     }
 }

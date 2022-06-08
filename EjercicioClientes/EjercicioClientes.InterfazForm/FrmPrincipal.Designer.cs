@@ -35,6 +35,7 @@ namespace EjercicioClientes.InterfazForm
             this._lblNombre = new System.Windows.Forms.Label();
             this._lblApellido = new System.Windows.Forms.Label();
             this._lblListaClientes = new System.Windows.Forms.Label();
+            this._btnCuentas = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // _btnAlta
@@ -97,11 +98,25 @@ namespace EjercicioClientes.InterfazForm
             this._lblListaClientes.TabIndex = 5;
             this._lblListaClientes.Text = ".";
             // 
+            // _btnCuentas
+            // 
+            this._btnCuentas.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this._btnCuentas.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._btnCuentas.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this._btnCuentas.Location = new System.Drawing.Point(51, 288);
+            this._btnCuentas.Name = "_btnCuentas";
+            this._btnCuentas.Size = new System.Drawing.Size(279, 79);
+            this._btnCuentas.TabIndex = 6;
+            this._btnCuentas.Text = "Menú Cuentas";
+            this._btnCuentas.UseVisualStyleBackColor = false;
+            this._btnCuentas.Click += new System.EventHandler(this._btnCuentas_Click);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(658, 424);
+            this.Controls.Add(this._btnCuentas);
             this.Controls.Add(this._lblListaClientes);
             this.Controls.Add(this._lblApellido);
             this.Controls.Add(this._lblNombre);
@@ -124,5 +139,6 @@ namespace EjercicioClientes.InterfazForm
         private System.Windows.Forms.Label _lblNombre;
         private System.Windows.Forms.Label _lblApellido;
         private System.Windows.Forms.Label _lblListaClientes;
+        private System.Windows.Forms.Button _btnCuentas;
     }
 }

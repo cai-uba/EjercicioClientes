@@ -19,6 +19,9 @@ namespace EjercicioClientes.Consola
             foreach(Cliente c in listado)
             {
                 Console.WriteLine(c);
+                Cuenta cu = clientes.TraerCuenta(c);
+                
+
             }
 
             Console.WriteLine("Ingrese telefono: ");
@@ -31,8 +34,8 @@ namespace EjercicioClientes.Consola
 
             try
             {
-                clientes.Alta("Carlos", "Gonzalez", 20123456,"asdqwe@yopmail.com","moldes 123",
-                    "1130604050", DateTime.Now.AddDays(-6000));
+               // clientes.Alta("Carlos", "Gonzalez", 20123456,"asdqwe@yopmail.com","moldes 123",
+                 //   "1130604050", DateTime.Now.AddDays(-6000));
             }
             catch (Exception ex)
             {

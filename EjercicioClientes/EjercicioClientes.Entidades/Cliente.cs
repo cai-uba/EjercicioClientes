@@ -12,6 +12,7 @@ namespace EjercicioClientes.Entidades
             private int _id;
             protected string _nombre;
             private string _apellido;
+
             private long _DNI;
             private string _direccion;
             private string _email;
@@ -29,6 +30,8 @@ namespace EjercicioClientes.Entidades
             public string Telefono { get => _telefono; set => _telefono = value; }
             public bool Activo { get => _activo; set => _activo = value; }
             public DateTime FechaNacimiento { get => _fechaNac; set => _fechaNac = value; }
+
+            public string ComboDisplay { get => $"{this.Nombre}/{this.Apellido}"; }
 
             public override string ToString()
             {
